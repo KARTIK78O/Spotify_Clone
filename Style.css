@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #000;
+}
+.nav_bar {
+  min-height: 4dvw;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+.nav_container1 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.nav_container2 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.fa-spotify {
+  color: #fff;
+  transform: scale(2);
+  margin: 0rem 2.5rem 0rem 2rem;
+}
+.fa-house {
+  padding: 0.5rem 0rem;
+  width: 2.2rem;
+  color: #fff;
+  transform: scale(1.4);
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.29);
+}
+
+.search_box input {
+  padding: 1rem 2rem 0.8rem 3.5rem;
+  width: 30rem;
+  background-color: rgba(128, 128, 128, 0.29);
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 5rem;
+  transition: border 0.3s ease;
+}
+
+.search_box input:focus {
+  border: 2px solid white;
+}
+
+.search_box input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: rgba(226, 220, 220, 0.791);
+}
+.fa-magnifying-glass {
+  color: rgba(226, 220, 220, 0.791);
+  position: relative;
+  left: 2.5rem;
+  transform: scale(1.5);
+}
+
+.nav_container2 .nav_text {
+  color: rgba(226, 220, 220, 0.791);
+  font-weight: 700;
+}
+
+.Options {
+  padding: 0rem 0.4rem;
+}
+
+.nav_divider {
+  color: rgba(226, 220, 220, 0.791);
+  margin: 0rem 1rem;
+  transform: scale(2);
+}
+
+.nav_divider:hover {
+  cursor: default;
+}
+.Install_App_txt,
+.SignUp_txt {
+  color: rgba(226, 220, 220, 0.791);
+  padding: 0rem 0.6rem;
+  font-weight: 600;
+  font-size: small;
+}
+
+.nav_btn {
+  padding: 1rem 2rem 0.8rem 2rem;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
+.nav_btn:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.nav_text:hover,
+.Options:hover,
+.Install_App_txt:hover,
+.SignUp_txt:hover {
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.nav_text,
+.Options,
+.Install_App_txt,
+.SignUp_txt,
+.nav_btn {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
