@@ -8,22 +8,22 @@ body {
   background: #000;
 }
 .nav_bar {
-  min-height: 4dvw;
   display: flex;
   align-items: center;
-  margin-top: 0.3rem;
+  justify-content: space-between;
+  min-height: 4dvw;
 }
 .nav_container1 {
-  width: 50%;
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: space-between;
+  width: 65%;
 }
 .nav_container2 {
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 .fa-spotify {
@@ -31,19 +31,34 @@ body {
   transform: scale(2);
   margin: 0rem 2.5rem 0rem 2rem;
 }
-.fa-house {
-  padding: 0.5rem 0rem;
-  width: 2.2rem;
+.fa-spotify:hover {
+  cursor: pointer;
+}
+.nav_container1 .home_btn {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
   color: #fff;
-  transform: scale(1.4);
+  transform: scale(1.5);
+  transform-origin: center center;
   border: 2px solid transparent;
   border-radius: 50%;
   background-color: rgba(128, 128, 128, 0.29);
 }
+.nav_container1 .home_btn:hover {
+  cursor: pointer;
+}
+
+.search_box {
+  display: flex;
+  align-items: center;
+}
 
 .search_box input {
-  padding: 1rem 2rem 0.8rem 3.5rem;
-  width: 30rem;
+  padding: 0.6rem 2rem 0.6rem 3.5rem;
+  width: 25rem;
   background-color: rgba(128, 128, 128, 0.29);
   outline: none;
   border: 2px solid transparent;
@@ -61,54 +76,73 @@ body {
   letter-spacing: 0.1rem;
   color: rgba(226, 220, 220, 0.791);
 }
-.fa-magnifying-glass {
+.nav_search_btn {
   color: rgba(226, 220, 220, 0.791);
   position: relative;
-  left: 2.5rem;
+  left: 2.2rem;
   transform: scale(1.5);
+}
+.nav_search_btn:hover {
+  cursor: pointer;
 }
 
 .nav_container2 .nav_text {
   color: rgba(226, 220, 220, 0.791);
   font-weight: 700;
 }
-
-.Options {
-  padding: 0rem 0.4rem;
+.Explore_btn {
+  font-weight: 600;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
 }
 
-.nav_divider {
-  color: rgba(226, 220, 220, 0.791);
-  margin: 0rem 1rem;
-  transform: scale(2);
+.Explore_btn:hover {
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
-.nav_divider:hover {
-  cursor: default;
-}
 .Install_App_txt,
-.SignUp_txt {
+.SignUp_txt,
+.bell,
+.Users {
   color: rgba(226, 220, 220, 0.791);
   padding: 0rem 0.6rem;
   font-weight: 600;
   font-size: small;
 }
-
+.nav_btn_box {
+  border: 2px solid transparent;
+  background-color: rgba(226, 220, 220, 0.162);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 50%;
+  margin: 0rem 0.6rem;
+}
 .nav_btn {
-  padding: 1rem 2rem 0.8rem 2rem;
-  border-radius: 2rem;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+
+  border: 2px solid transparent;
+  border-radius: 50%;
   font-weight: 700;
+  background-color: rgb(0, 162, 255);
 }
 
 .nav_btn:hover {
   cursor: pointer;
   transform: scale(1.02);
 }
+.Install_App_txt {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
 
 .nav_text:hover,
 .Options:hover,
 .Install_App_txt:hover,
-.SignUp_txt:hover {
+.SignUp_txt:hover,
+.bell:hover,
+.Users:hover,
+.recents_box:hover {
   color: #fff;
   cursor: pointer;
   transform: scale(1.02);
@@ -118,6 +152,202 @@ body {
 .Options,
 .Install_App_txt,
 .SignUp_txt,
-.nav_btn {
-  transition: color 0.2s ease, transform 0.2s ease;
+.nav_btn,
+.bell,
+.Users,
+.Explore_btn,
+.library_search_btn {
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+/* ================================================================| */
+
+.Main_content {
+  display: flex;
+  margin: 0rem 0.5rem;
+  gap: 0.5rem;
+}
+
+.Library_Section {
+  /* overflow: hidden; */
+  height: 100%;
+  width: 30%;
+  background-color: rgba(226, 220, 220, 0.096);
+  border-radius: 1rem;
+}
+
+.Library_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 1rem auto;
+  color: #fff;
+}
+.library_txt {
+  font-weight: 700;
+}
+.create_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.create_btn {
+  background-color: rgba(226, 220, 220, 0.068);
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+.expand_symbol {
+  color: rgba(226, 220, 220, 0.63);
+  padding: 0.6rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus_symbol {
+  padding: 0rem 1.5rem 0rem 0rem;
+}
+
+.library_txt,
+.create_btn,
+.expand_symbol,
+.plus_symbol,
+.library_btn button {
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+.create_btn:hover {
+  background-color: rgba(226, 220, 220, 0.11);
+}
+
+.expand_symbol:hover,
+.library_search_btn:hover {
+  background-color: rgba(226, 220, 220, 0.068);
+  cursor: pointer;
+  color: #fff;
+}
+.library_search_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+
+.library_btn {
+  display: flex;
+  width: 90%;
+  margin: 1rem auto;
+  gap: 0.3rem;
+}
+.library_btn button {
+  background-color: rgba(226, 220, 220, 0.11);
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+}
+.library_btn button:hover {
+  cursor: pointer;
+  background-color: rgba(226, 220, 220, 0.151);
+}
+
+.library_search_container {
+  padding: 0rem 1rem;
+  color: #ffffff94;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0rem auto;
+}
+.recents_box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.Recents_txt {
+  font-size: 0.8rem;
+}
+
+.Playlist_Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0rem 4rem 0rem;
+  gap: 1.2rem;
+  width: 100%;
+  color: #fff;
+}
+.Playlist_Container img {
+  width: 25%;
+  height: 6dvh;
+  border-radius: 0.2rem;
+}
+
+.box_Container {
+  width: 95%;
+  margin: 0rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: #ffffff94;
+  font-weight: 600;
+}
+.box_Container:hover {
+  background-color: rgba(226, 220, 220, 0.11);
+  cursor: pointer;
+  color: #fff;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.play_btn:hover {
+  cursor: pointer;
+}
+
+.song_name_box {
+  display: flex;
+  flex-direction: column;
+}
+.Songs_Section {
+  /* overflow: scroll; */
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #434343be,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #434343cb,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 1rem;
+  height: 100dvh;
+  width: 70%;
 }
