@@ -372,3 +372,29 @@ body {
   cursor: pointer;
   background-color: rgba(226, 220, 220, 0.151);
 }
+
+.box_1_txt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  margin: 2rem auto 1rem auto;
+  width: 90%;
+}
+
+.Trending_Now_txt {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.Show_all_txt {
+  color: #ffffff94;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.Trending_Now_txt:hover,
+.Show_all_txt:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
