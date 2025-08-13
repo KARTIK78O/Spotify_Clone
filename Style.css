@@ -6,18 +6,21 @@
 }
 body {
   background: #000;
+  height: 100%;
+  overflow: hidden;
 }
 .nav_bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 4dvw;
+  margin: 0rem auto;
 }
 .nav_container1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 65%;
+  width: 63%;
 }
 .nav_container2 {
   display: flex;
@@ -165,11 +168,10 @@ body {
 .Main_content {
   display: flex;
   margin: 0rem 0.5rem;
-  gap: 0.5rem;
+  gap: 1%;
 }
 
 .Library_Section {
-  /* overflow: hidden; */
   height: 100%;
   width: 30%;
   background-color: rgba(226, 220, 220, 0.096);
@@ -287,10 +289,10 @@ body {
 }
 
 .Playlist_Container {
+  margin-bottom: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 0rem 9rem 0rem;
   width: 100%;
   color: #fff;
 }
@@ -336,7 +338,6 @@ body {
 /*================================================================| */
 
 .Songs_Section {
-  /* overflow: scroll; */
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
@@ -356,8 +357,7 @@ body {
 
 .Songs_Section_btn {
   display: flex;
-  width: 90%;
-  margin: 1rem auto;
+  margin: 1rem 2rem;
   gap: 0.3rem;
 }
 .Songs_Section_btn button {
@@ -372,29 +372,106 @@ body {
   cursor: pointer;
   background-color: rgba(226, 220, 220, 0.151);
 }
+.All_Songs_Container {
+  overflow: scroll;
+  height: 100%;
+}
+.Songs_Cards_Container {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  padding: 0em 0rem 0.5rem 2rem;
+}
 
-.box_1_txt {
+.Songs_box {
+  margin-bottom: 2rem;
+}
+.Song_box_txt {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  margin: 2rem auto 1rem auto;
   width: 90%;
+  margin: 1rem 2rem;
 }
 
-.Trending_Now_txt {
+.txt_1 {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.Show_all_txt {
+.txt_2 {
   color: #ffffff94;
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-.Trending_Now_txt:hover,
-.Show_all_txt:hover {
+.txt_1:hover,
+.txt_2:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+/* === HOVER EFFECT KE LIYE CODE === */
+.Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  border-radius: 0.8rem;
+  padding: 0.5rem;
+}
+
+.Card img {
+  border: 2px solid transparent;
+  border-radius: 0.8rem;
+  height: 10rem;
+  width: 11rem;
+}
+
+.Card p {
+  padding: 0.5rem 0rem;
+  color: #ffffff94;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.Card:hover {
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+/* Play button ka style */
+.card-play-btn {
+  position: absolute;
+  bottom: 4.5rem;
+  right: 0.8rem;
+
+  /* Button ka design */
+  width: 3rem;
+  height: 3rem;
+  background-color: #1db954;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+}
+.Card:hover .card-play-btn {
+  opacity: 1;
+  transform: translateY(0); /* Apni original position par aa jayega */
+}
+
+.card-play-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #000;
 }
