@@ -382,6 +382,7 @@ body {
   color: #fff;
   overflow-x: auto;
   margin: 0rem 1.2rem;
+  padding-bottom: 1rem;
 }
 
 .Songs_box {
@@ -541,14 +542,21 @@ body {
 .All_Songs_Container::-webkit-scrollbar {
   min-height: 100%;
 }
-.All_Songs_Container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1); /* translucent */
-  backdrop-filter: blur(5px);           /* blur effect */
-  border-radius: 8px;                   /* rounded corners */
-}
+
 .All_Songs_Container::-webkit-scrollbar-thumb {
   background-color: rgba(226, 220, 220, 0.213);
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
-  min-height: 20px; /* minimum thumb height */
+}
+/*====================== Horizontal Cards ScrollBar =============*/
+.Songs_Cards_Container::-webkit-scrollbar {
+  min-height: 100%;
+}
+.Songs_Cards_Container::-webkit-scrollbar-thumb {
+  background-color: rgba(226, 220, 220, 0.093);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom: 1px solid rgba(226, 220, 220, 0.485);
+  border-right: 1px solid rgba(226, 220, 220, 0.485);
+  border-left: 2px solid rgba(226, 220, 220, 0.485);
 }
