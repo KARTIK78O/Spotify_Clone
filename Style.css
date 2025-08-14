@@ -381,7 +381,7 @@ body {
   gap: 1rem;
   color: #fff;
   overflow-x: auto;
-  margin: 0rem 0.5rem;
+  margin: 0rem 1.2rem;
 }
 
 .Songs_box {
@@ -420,6 +420,7 @@ body {
   flex-direction: column;
   border-radius: 0.8rem;
   padding: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .Card img {
@@ -438,6 +439,7 @@ body {
 
 .Card:hover {
   cursor: pointer;
+  background-color: rgba(226, 220, 220, 0.077);
 }
 
 /* Play button ka style */
@@ -484,7 +486,7 @@ body {
   border-top: 1px solid #ffffff63;
   border-bottom: 1px solid #ffffff63;
   text-align: justify;
-  gap: 5rem;
+  gap: 4rem;
   padding: 2rem 0rem 5rem 0rem;
   margin: 0rem 2rem 6rem 2rem;
 }
@@ -493,17 +495,60 @@ body {
   flex-direction: column;
   gap: 0.8rem;
 }
-.Songs_Section_footer p {
-  color: #ffffff94;
-  font-weight: 900;
-  font-size: 1rem;
-}
 .Footer_mini_heading {
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1rem;
 }
-.Footer_icons {
+.Songs_Section_footer p {
+  color: #ffffff94;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.Songs_Section_footer p:hover {
+  cursor: pointer;
   color: #fff;
-  border: 2px solid white;
+  text-decoration: underline;
+}
+
+.Footer_icons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0rem 1rem;
+  width: 20%;
+}
+
+.Footer_icons i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  background-color: rgba(226, 220, 220, 0.139);
+  transition: all 0.3s ease;
+}
+
+.Footer_icons i:hover {
+  background-color: rgba(226, 220, 220, 0.213);
+}
+
+/*====================== Vertical ScrollBar =============*/
+.All_Songs_Container::-webkit-scrollbar {
+  min-height: 100%;
+}
+.All_Songs_Container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* translucent */
+  backdrop-filter: blur(5px);           /* blur effect */
+  border-radius: 8px;                   /* rounded corners */
+}
+.All_Songs_Container::-webkit-scrollbar-thumb {
+  background-color: rgba(226, 220, 220, 0.213);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  min-height: 20px; /* minimum thumb height */
 }
