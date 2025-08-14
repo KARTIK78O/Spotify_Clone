@@ -168,6 +168,7 @@ body {
   display: flex;
   margin: 0rem 0.5rem;
   gap: 1%;
+  height: calc(100vh - 4dvw);
 }
 
 .Library_Section {
@@ -350,7 +351,6 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   border-radius: 1rem;
-  height: calc(100dvh-10vh);
   width: 70%;
 }
 
@@ -373,7 +373,7 @@ body {
 }
 .All_Songs_Container {
   overflow-y: auto;
-  height: 100vh;
+  height: 100%;
 }
 .Songs_Cards_Container {
   display: flex;
@@ -482,5 +482,17 @@ body {
 .Songs_Section_footer {
   display: flex;
   border: 2px solid white;
-  height: 100vh;
+  text-align: justify;
+  gap: 5rem;
+  padding: 2rem ;
+}
+
+.Footer_mini_heading{
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.Footer_icons{
+  color: #fff;
+  border: 2px solid white;
 }
