@@ -553,6 +553,7 @@ body {
   min-height: 100%;
 }
 .Songs_Cards_Container::-webkit-scrollbar-thumb {
+  display: flex;
   background-color: rgba(226, 220, 220, 0.093);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
