@@ -168,11 +168,10 @@ body {
   display: flex;
   margin: 0rem 0.5rem;
   gap: 1%;
-  height: calc(100vh - 4dvw);
+  height: calc(100vh - 8dvw);
 }
 
 .Library_Section {
-  height: 100%;
   width: 30%;
   background-color: rgba(226, 220, 220, 0.096);
   border-radius: 1rem;
@@ -351,6 +350,7 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   border-radius: 1rem;
+  height: calc(100dvh-4dvw);
   width: 70%;
 }
 
@@ -373,7 +373,8 @@ body {
 }
 .All_Songs_Container {
   overflow-y: auto;
-  height: calc(100vh - 4dvw);
+  height: 100%;
+  padding-bottom: 8rem;
 }
 .Songs_Cards_Container {
   display: flex;
@@ -489,7 +490,7 @@ body {
   text-align: justify;
   gap: 4rem;
   padding: 2.5rem 0rem 2.5rem 0rem;
-  margin: 0rem 2rem 6rem 2rem;
+  margin: 0rem 2rem 0rem 2rem;
 }
 .footer_txt_box {
   display: flex;
@@ -560,4 +561,27 @@ body {
   border-bottom: 1px solid rgba(226, 220, 220, 0.485);
   border-right: 1px solid rgba(226, 220, 220, 0.485);
   border-left: 2px solid rgba(226, 220, 220, 0.485);
+}
+/*================================================================*/
+/* music_Player */
+
+.music_Player {
+  position: fixed; 
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 72px;
+  background: rgba(18, 18, 18, 0.9);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+.music_Player img {
+  height: 48px;
+  width: 48px;
+  border-radius: 4px;
 }
