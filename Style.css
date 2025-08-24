@@ -431,13 +431,13 @@ body {
   height: 10rem;
   width: 11rem;
 } 
-.Card .Artist_Name {
+.Card .Artist_Name ,.Card .Song_name {
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
 } 
 .Card p {
-  color: #ffffff94;
+  color: #ffffffac;
   font-size: 0.8rem;
   font-weight: 500;
 }
@@ -539,7 +539,8 @@ body {
 }
 
 .Footer_icons i:hover {
-  background-color: rgba(226, 220, 220, 0.213);
+  background-color: rgba(226, 220, 220, 0.279);
+  cursor: pointer;
 }
 
 /*====================== Vertical ScrollBar =============*/
