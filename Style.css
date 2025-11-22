@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 body {
   background: #000;
@@ -449,7 +450,7 @@ body {
 }
 
 /* Play button ka style */
-.card-play-btn {
+.card-play-btn{
   position: absolute;
   bottom: 4.5rem;
   right: 0.8rem;
@@ -632,9 +633,20 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
-.controls .play {
-  font-size: 28px;
+
+.controls .play{
+  width: 3rem;
+  height: 3rem;
+  background-color: #1db954;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
+
+
 .progress-bar {
   display: flex;
   align-items: center;
